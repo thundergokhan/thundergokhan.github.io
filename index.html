@@ -60,12 +60,93 @@
       <div class="hero-machine reveal" aria-label="Original formula racing car illustration">
         <div class="machine-number">34</div>
         <div class="race-car">
-          <img src="formula-car-modern.jpg" alt="Formula racing car">
+          <svg class="formula-render" viewBox="0 0 920 390" role="img" aria-label="Original red systems Formula racing car">
+            <defs>
+              <linearGradient id="bodyRed" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ff5369"/>
+                <stop offset=".32" stop-color="#ef233c"/>
+                <stop offset=".72" stop-color="#bd1028"/>
+                <stop offset="1" stop-color="#4f0713"/>
+              </linearGradient>
+              <linearGradient id="carbon" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#343434"/>
+                <stop offset=".45" stop-color="#111"/>
+                <stop offset="1" stop-color="#292929"/>
+              </linearGradient>
+              <radialGradient id="tireGrad">
+                <stop offset="0" stop-color="#777"/>
+                <stop offset=".14" stop-color="#222"/>
+                <stop offset=".7" stop-color="#090909"/>
+                <stop offset=".83" stop-color="#303030"/>
+                <stop offset="1" stop-color="#050505"/>
+              </radialGradient>
+              <filter id="carGlow">
+                <feGaussianBlur stdDeviation="5" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <pattern id="carbonPattern" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+                <rect width="12" height="12" fill="#171717"/>
+                <rect width="3" height="12" fill="#292929"/>
+              </pattern>
+            </defs>
+
+            <ellipse cx="470" cy="328" rx="390" ry="25" fill="#000" opacity=".55"/>
+            <g class="car-wheels">
+              <g class="wheel rear-wheel">
+                <circle cx="252" cy="246" r="101" fill="url(#tireGrad)"/>
+                <circle cx="252" cy="246" r="72" fill="#151515" stroke="#4a4a4a" stroke-width="8"/>
+                <circle cx="252" cy="246" r="48" fill="none" stroke="#a7a7a2" stroke-width="12" stroke-dasharray="14 9"/>
+                <circle cx="252" cy="246" r="20" fill="#111" stroke="#bbb" stroke-width="5"/>
+                <path d="M252 205v82M211 246h82M223 217l58 58M281 217l-58 58" stroke="#777" stroke-width="5"/>
+                <text x="252" y="161" text-anchor="middle" fill="#ef233c" font-size="17" font-family="JetBrains Mono">P34</text>
+              </g>
+              <g class="wheel front-wheel">
+                <circle cx="746" cy="270" r="82" fill="url(#tireGrad)"/>
+                <circle cx="746" cy="270" r="57" fill="#151515" stroke="#4a4a4a" stroke-width="7"/>
+                <circle cx="746" cy="270" r="38" fill="none" stroke="#a7a7a2" stroke-width="10" stroke-dasharray="12 8"/>
+                <circle cx="746" cy="270" r="16" fill="#111" stroke="#bbb" stroke-width="4"/>
+                <path d="M746 237v66M713 270h66M723 247l46 46M769 247l-46 46" stroke="#777" stroke-width="4"/>
+                <text x="746" y="182" text-anchor="middle" fill="#ef233c" font-size="15" font-family="JetBrains Mono">P34</text>
+              </g>
+            </g>
+
+            <g class="car-shell" filter="url(#carGlow)">
+              <path d="M106 216 L210 205 L342 208 L456 186 L575 176 L700 205 L786 222 L866 241 L842 273 L686 274 L584 248 L470 261 L331 267 L213 286 L130 270Z" fill="url(#bodyRed)"/>
+              <path d="M356 205 Q420 145 510 150 Q580 154 620 204 L570 219 L418 220Z" fill="#151515"/>
+              <path d="M424 203 Q457 133 528 147 Q565 155 585 202Z" fill="#ef233c"/>
+              <path d="M442 191 Q463 144 512 147 Q543 151 558 190Z" fill="#090909"/>
+              <path d="M487 151 L498 111 L544 137 L551 166Z" fill="url(#carbonPattern)" stroke="#bbb" stroke-width="6"/>
+              <path d="M492 151 L503 123 L526 139" fill="none" stroke="#ef233c" stroke-width="5"/>
+              <path d="M366 208 L410 177 L487 174 L461 220Z" fill="#d21a31"/>
+              <path d="M584 182 L661 205 L698 245 L613 226Z" fill="#d91931"/>
+              <path d="M210 206 L112 184 L84 197 L120 221Z" fill="url(#bodyRed)"/>
+              <path d="M108 175 L68 171 L65 199 L112 196Z" fill="#151515"/>
+              <path d="M64 184 L12 177 L4 190 L62 202Z" fill="url(#carbonPattern)"/>
+              <path d="M786 228 L888 211 L906 231 L790 260Z" fill="url(#bodyRed)"/>
+              <path d="M834 231 L916 219 L912 240 L830 254Z" fill="#151515"/>
+              <path d="M824 240 L910 232 L918 252 L837 267Z" fill="url(#carbonPattern)"/>
+              <path d="M459 218 L583 228 L657 250 L530 255Z" fill="#202020"/>
+              <path d="M560 226 L654 239 L674 260 L587 252Z" fill="url(#carbonPattern)"/>
+              <path d="M205 266 L338 257 L420 265 L331 286Z" fill="url(#carbonPattern)"/>
+              <path d="M668 258 L752 276 L678 280 L617 266Z" fill="url(#carbonPattern)"/>
+            </g>
+
+            <g class="car-surface-copy" fill="#fff" font-family="JetBrains Mono">
+              <text x="462" y="213" font-size="52" font-weight="700" transform="skewX(-12)">34</text>
+              <text x="331" y="244" font-size="11">ORACLE · SYSTEMS</text>
+              <text x="609" y="226" font-size="10">WEBLOGIC / MQ</text>
+              <text x="744" y="247" font-size="9">APACHE</text>
+              <text x="99" y="189" font-size="9">LINUX</text>
+            </g>
+            <g fill="none" stroke="#ffb8c0" stroke-width="3" opacity=".7">
+              <path d="M296 208 Q410 190 500 184"/>
+              <path d="M520 183 Q610 189 690 220"/>
+            </g>
+          </svg>
           <div class="real-car-overlay">
             <span>GY / 34</span>
-            <b>WEBLOGIC · ORACLE · MQ · APACHE</b>
+            <b>ORIGINAL VECTOR // SYSTEMS RACING UNIT</b>
           </div>
-          <a class="car-image-credit" href="https://commons.wikimedia.org/wiki/File:Jaguar_R2_(side_view).jpg" target="_blank" rel="noreferrer">IMAGE / WIKIMEDIA COMMONS</a>
         </div>
         <div class="car-system-hud">
           <span>CORE UNIT</span>
