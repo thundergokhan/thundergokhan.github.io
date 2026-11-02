@@ -68,6 +68,7 @@ applyLanguage(language);
 const stage = document.querySelector(".hero-machine");
 const progress = document.getElementById("pageProgress");
 const scrollCar = document.getElementById("scrollCar");
+const raceHeader = document.querySelector(".race-header");
 
 if (window.matchMedia("(pointer: fine)").matches) {
   window.addEventListener("pointermove", (event) => {
@@ -92,6 +93,7 @@ function updateRaceProgress() {
   const ratio = scrollable > 0 ? window.scrollY / scrollable : 0;
   progress?.style.setProperty("transform", `scaleX(${ratio})`);
   scrollCar?.style.setProperty("--race-position", `${Math.min(84, ratio * 84)}vh`);
+  raceHeader?.classList.toggle("scrolled", window.scrollY > 24);
 }
 
 window.addEventListener("scroll", updateRaceProgress, { passive: true });

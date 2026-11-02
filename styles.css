@@ -789,3 +789,203 @@ footer > :last-child { justify-self: end; }
     50% { transform: scale(.82) rotate(-3.6deg) translateY(-5px); }
   }
 }
+
+/* Final race-control visual system */
+:root {
+  --race-red: #ff1f3d;
+  --race-red-soft: rgba(255, 31, 61, .18);
+  --ink: #090909;
+  --paper: #f3f1e8;
+  --cool-white: #fbfaf6;
+}
+
+::selection {
+  color: var(--ink);
+  background: #ffb3bf;
+}
+
+.race-header {
+  position: fixed;
+  height: 72px;
+  background: rgba(9, 9, 9, .72);
+  backdrop-filter: blur(18px) saturate(1.2);
+  border-bottom-color: rgba(255,255,255,.12);
+  transition: height .25s ease, background .25s ease;
+}
+.race-header.scrolled {
+  height: 62px;
+  background: rgba(9, 9, 9, .94);
+  box-shadow: 0 10px 40px rgba(0,0,0,.22);
+}
+.race-header .driver-number {
+  border-color: var(--race-red);
+  box-shadow: 0 0 24px rgba(255,31,61,.16);
+}
+.race-nav a {
+  position: relative;
+  letter-spacing: .13em;
+}
+.race-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -9px;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: right;
+  background: var(--race-red);
+  transition: transform .2s ease;
+}
+.race-nav a:hover::after,
+.race-nav a:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.hero-name {
+  font-family: var(--display-condensed);
+  font-weight: 800;
+  font-style: italic;
+  line-height: .74;
+  text-transform: uppercase;
+  text-shadow: 0 12px 50px rgba(0,0,0,.24);
+}
+.hero-name em {
+  color: var(--race-red);
+  text-shadow: 0 0 42px rgba(255,31,61,.18);
+}
+.hero-role {
+  border-left-width: 3px;
+  border-left-color: var(--race-red);
+  color: #d0d0cb;
+}
+
+.race-button {
+  background: var(--race-red);
+  font-weight: 700;
+  letter-spacing: .11em;
+  box-shadow: 0 14px 44px rgba(255,31,61,.16);
+}
+.race-button:focus-visible,
+.language-switch:focus-visible,
+.github-link:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(255,255,255,.92);
+  outline-offset: 4px;
+}
+
+.section-head h2,
+.contact-race h2 {
+  font-family: var(--display-condensed);
+  font-weight: 700;
+  letter-spacing: -.045em;
+}
+.standing {
+  min-height: 190px;
+}
+.standing-team {
+  letter-spacing: .04em;
+}
+.standing-role {
+  font-family: var(--display-condensed);
+  font-size: 34px;
+  font-weight: 600;
+}
+.standing:hover {
+  box-shadow: inset 8px 0 0 var(--race-red);
+}
+
+.garage {
+  background:
+    radial-gradient(circle at 82% 8%, rgba(255,31,61,.18), transparent 20%),
+    radial-gradient(circle at 18% 78%, rgba(255,255,255,.035), transparent 22%),
+    linear-gradient(135deg, #080808 0, #101010 52%, #080808 100%);
+}
+.project-card {
+  border-color: rgba(255,255,255,.1);
+  box-shadow: 0 24px 70px rgba(0,0,0,.18);
+}
+.project-card:hover {
+  border-color: var(--race-red);
+  box-shadow: 0 28px 80px rgba(0,0,0,.34), 0 0 0 1px rgba(255,31,61,.12);
+}
+.project-info h3 {
+  font-family: var(--display-condensed);
+  font-size: 38px;
+  font-weight: 600;
+}
+.project-info p {
+  color: #aaa;
+}
+.project-info .source {
+  color: var(--cool-white);
+  letter-spacing: .04em;
+}
+
+.tool-box {
+  background: rgba(243,241,232,.66);
+}
+.tool-box:hover {
+  background:
+    linear-gradient(135deg, transparent 0 72%, rgba(255,31,61,.16) 72%),
+    var(--ink);
+  transform: translateY(-7px);
+}
+.tool-box h3 {
+  font-family: var(--display-condensed);
+  font-size: 32px;
+}
+.tool-box p {
+  color: #777;
+}
+.tool-box:hover p { color: #bbb; }
+
+.contact-race {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255,255,255,.16), transparent 18%),
+    linear-gradient(120deg, #d51631 0, var(--race-red) 68%, #cf102d 100%);
+}
+.contact-panel p {
+  font-size: 15px;
+  color: rgba(255,255,255,.86);
+}
+.contact-links a {
+  background: rgba(9,9,9,.92);
+  border-color: transparent;
+  transition: transform .2s ease, background .2s ease;
+}
+.contact-links a:hover {
+  transform: translateY(-3px);
+  background: var(--ink);
+}
+
+.timing-deck strong {
+  font-family: var(--mono);
+  letter-spacing: .02em;
+}
+.timing-deck div:nth-child(odd) {
+  background: rgba(255,255,255,.018);
+}
+
+.reveal {
+  will-change: opacity, transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .race-header { height: 64px; }
+  .race-header.scrolled { height: 58px; }
+  .hero-name { line-height: .78; }
+  .standing-role { font-size: 28px; }
+  .project-info h3 { font-size: 34px; }
+}
