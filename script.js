@@ -9,8 +9,8 @@ const copy = {
     roleCloud: "Cloud Services Automation",
     roleSpecialist: "Enterprise Solution Specialist",
     garageLabel: "Garage", garageTitle1: "Geliştir.", garageTitle2: "Test et. Yayınla.",
-    middlewareMonitor: "Middleware servisleri ve altyapı sinyallerini tek panelde izleyen Python projesi.", bsaChecker: "BladeLogic Server Automation agent durumlarını kontrol eden Python aracı.",
-    yamlScanner: "Kullanımda olan YAML yapılarını tarayan ve tutarsızlıkları bulan scanner.", viewSource: "Kaynağı incele ↗",
+    middlewareMonitor: "Middleware servisleri ve altyapı sinyallerini tek panelde izleyen Python projesi.",     bsaChecker: "RSCD agent portlarını tarayan ve isteğe bağlı WinRM ile Windows servislerini yeniden başlatan Python aracı.",
+    uptimeMonitor: "Endpoint erişilebilirliğini HTTP durumu, gecikme süresi ve hata bilgisiyle izleyen hafif Python CLI aracı.", viewSource: "Kaynağı incele ↗",
     toolkitLabel: "Teknik setup", toolkitTitle1: "Teknik", toolkitTitle2: "yapı",
     contactLabel: "İletişim", contactTitle: "Hadi yarışalım.",
     contactText: "Altyapı, otomasyon veya yeni bir iş birliği hakkında LinkedIn üzerinden ulaşabilirsin.", backTop: "Yukarı ↑"
@@ -25,8 +25,8 @@ const copy = {
     roleCloud: "Cloud Services Automation",
     roleSpecialist: "Enterprise Solution Specialist",
     garageLabel: "Garage", garageTitle1: "Build.", garageTitle2: "Test. Ship.",
-    middlewareMonitor: "A Python project for monitoring middleware services and infrastructure signals from one dashboard.", bsaChecker: "A Python tool for checking BladeLogic Server Automation agent health.",
-    yamlScanner: "A scanner for YAML usage and configuration inconsistencies.", viewSource: "View source ↗",
+    middlewareMonitor: "A Python project for monitoring middleware services and infrastructure signals from one dashboard.", bsaChecker: "A Python tool for checking RSCD agent ports with optional WinRM-based Windows service restarts.",
+    uptimeMonitor: "A lightweight Python CLI for endpoint availability, HTTP status, latency, and error reporting.", viewSource: "View source ↗",
     toolkitLabel: "Technical setup", toolkitTitle1: "Technical", toolkitTitle2: "setup",
     contactLabel: "Contact", contactTitle: "Let's race.",
     contactText: "Reach out through LinkedIn to discuss infrastructure, automation or a new collaboration.", backTop: "Back to top ↑"

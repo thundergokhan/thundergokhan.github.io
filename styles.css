@@ -215,8 +215,11 @@ button { font: inherit; }
 .monitor-screen::after { content: ""; position: absolute; left: 18px; right: 18px; bottom: 40px; height: 70px; background: repeating-linear-gradient(90deg,var(--red) 0 9px,transparent 9px 16px); clip-path: polygon(0 100%,0 70%,12% 70%,12% 30%,25% 30%,25% 75%,38% 75%,38% 20%,51% 20%,51% 55%,64% 55%,64% 10%,76% 10%,76% 65%,90% 65%,90% 35%,100% 35%,100% 100%); }
 .terminal { position: absolute; left: 12%; top: 22%; font: 500 15px/1.8 var(--mono); color: #ddd; }
 .terminal span { color: #5cdb72; }
-.yaml-layers { position: absolute; inset: 0; display: grid; place-items: center; }
-.yaml-layers::before { content: "YAML"; font-size: 76px; font-weight: 700; color: rgba(255,255,255,.08); transform: rotate(-12deg); }
+.uptime-layers {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  font-size: 76px; font-weight: 700; color: #5cdb72; transform: rotate(-12deg);
+}
+.uptime-layers span { display: block; color: rgba(255,255,255,.2); font: 600 28px var(--mono); text-align: center; }
 .project-info { padding: 28px; }
 .project-index { color: var(--red); font: 600 10px var(--mono); }
 .project-info h3 { margin: 18px 0 10px; font-size: 30px; letter-spacing: -.04em; }
