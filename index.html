@@ -12,6 +12,7 @@
 </head>
 <body>
   <div class="track-lines" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
   <header class="topbar">
     <a class="wordmark" href="#top" aria-label="Gökhan Yıldırım home">
       <span class="pixel-mark">GY</span>
@@ -63,12 +64,25 @@
           <div class="wing front"></div>
           <div class="speed-lines"><i></i><i></i><i></i></div>
         </div>
+        <svg class="track-map" viewBox="0 0 560 380" role="img" aria-label="Abstract systems circuit">
+          <path class="track-shadow" d="M46 286 C84 348 176 331 225 276 C280 214 350 286 420 240 C482 199 487 124 430 96 C352 58 318 112 248 104 C166 94 119 32 72 80 C30 123 72 199 46 286"/>
+          <path class="track-line" d="M46 286 C84 348 176 331 225 276 C280 214 350 286 420 240 C482 199 487 124 430 96 C352 58 318 112 248 104 C166 94 119 32 72 80 C30 123 72 199 46 286"/>
+          <circle cx="46" cy="286" r="7"/><circle cx="430" cy="96" r="7"/>
+        </svg>
         <div class="telemetry bottom">
           <div><span data-i18n="uptime">UPTİME</span><strong>99.99%</strong></div>
           <div><span>ENV</span><strong>PROD</strong></div>
           <div><span data-i18n="focus">ODAK</span><strong>0 OPS</strong></div>
         </div>
       </div>
+    </section>
+
+    <section class="telemetry-strip" aria-label="System telemetry">
+      <div class="strip-label"><span>LIVE FEED</span><strong>OPS / 01</strong></div>
+      <div class="signal"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="strip-stat"><span>INCIDENTS</span><strong>00</strong></div>
+      <div class="strip-stat"><span>LATENCY</span><strong>12ms</strong></div>
+      <div class="strip-stat"><span>REGION</span><strong>IST</strong></div>
     </section>
 
     <div class="speed-ticker" aria-hidden="true">
@@ -91,6 +105,11 @@
           <h3 data-i18n="roleCurrent">Integration Middleware Technologies</h3>
           <p data-i18n="currentRole">Garanti BBVA Technology bünyesinde BilgeAdam Technologies üzerinden middleware platform operations, automation ve secure file transfer operasyonları.</p>
           <div class="tags"><span>WebLogic</span><span>WebSphere</span><span>IBM MQ</span><span>Linux</span><span>OpenShift</span></div>
+          <div class="career-spec">
+            <div><span>ENVIRONMENTS</span><strong>DEV / TEST / PROD</strong></div>
+            <div><span>FOCUS</span><strong>RELIABILITY</strong></div>
+            <div><span>MISSION</span><strong>ZERO DRIFT</strong></div>
+          </div>
         </article>
         <article class="career-card reveal">
           <div class="lap-number">02</div>

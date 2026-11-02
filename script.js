@@ -62,3 +62,26 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 applyLanguage(language);
+
+const cursorGlow = document.querySelector(".cursor-glow");
+const stage = document.querySelector(".car-stage");
+const trackMap = document.querySelector(".track-map");
+
+if (window.matchMedia("(pointer: fine)").matches) {
+  window.addEventListener("pointermove", (event) => {
+    cursorGlow.style.opacity = "1";
+    cursorGlow.style.left = `${event.clientX}px`;
+    cursorGlow.style.top = `${event.clientY}px`;
+  });
+
+  stage.addEventListener("pointermove", (event) => {
+    const bounds = stage.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+    trackMap.style.transform = `scale(.88) translate(${x * -12}px, ${y * -8}px)`;
+  });
+
+  stage.addEventListener("pointerleave", () => {
+    trackMap.style.transform = "scale(.88)";
+  });
+}
