@@ -12,7 +12,7 @@ const copy = {
     middlewareMonitor: "Middleware servisleri ve altyapı sinyallerini tek panelde izleyen Python projesi.", bsaChecker: "BladeLogic Server Automation agent durumlarını kontrol eden Python aracı.",
     yamlScanner: "Kullanımda olan YAML yapılarını tarayan ve tutarsızlıkları bulan scanner.", viewSource: "Kaynağı incele ↗",
     toolkitLabel: "ARAÇ KUTUSU", toolkitTitle: "Takımın ekipman kutusu.", contactLabel: "İLETİŞİM", contactTitle1: "Sıradaki hedef", contactTitle2: "birlikte.",
-    contactText: "Altyapı, otomasyon veya yeni bir iş birliği hakkında konuşmak için ulaşabilirsin.", backTop: "Yukarı ↑"
+    contactText: "Altyapı, otomasyon veya yeni bir iş birliği hakkında LinkedIn üzerinden ulaşabilirsin.", backTop: "Yukarı ↑"
   },
   en: {
     navExperience: "Experience", navProjects: "Projects", navToolkit: "Toolkit", navContact: "Contact",
@@ -27,7 +27,7 @@ const copy = {
     middlewareMonitor: "A Python project for monitoring middleware services and infrastructure signals from one dashboard.", bsaChecker: "A Python tool for checking BladeLogic Server Automation agent health.",
     yamlScanner: "A scanner for YAML usage and configuration inconsistencies.", viewSource: "View source ↗",
     toolkitLabel: "TECH STACK", toolkitTitle: "The team's equipment box.", contactLabel: "CONTACT", contactTitle1: "The next target", contactTitle2: "together.",
-    contactText: "Reach out to discuss infrastructure, automation or a new collaboration.", backTop: "Back to top ↑"
+    contactText: "Reach out through LinkedIn to discuss infrastructure, automation or a new collaboration.", backTop: "Back to top ↑"
   }
 };
 
