@@ -318,6 +318,13 @@ h1 {
   filter: drop-shadow(0 30px 30px rgba(0,0,0,.55));
   transform: rotate(-4deg);
 }
+.race-car {
+  animation: car-idle 3.6s ease-in-out infinite;
+}
+@keyframes car-idle {
+  0%, 100% { transform: rotate(-4deg) translateY(0); }
+  50% { transform: rotate(-3.6deg) translateY(-5px); }
+}
 .race-car::after {
   content: "";
   position: absolute;
@@ -333,6 +340,10 @@ h1 {
   position: absolute; width: 88%; height: 92px; left: 4%; top: 112px;
   background: linear-gradient(155deg, #ff4058 0 18%, var(--red) 18% 72%, #a91529 72%);
   clip-path: polygon(0 60%, 9% 45%, 28% 32%, 45% 20%, 72% 14%, 91% 32%, 100% 55%, 91% 75%, 67% 83%, 9% 76%);
+  background-image:
+    repeating-linear-gradient(135deg, transparent 0 5px, rgba(255,255,255,.025) 5px 6px),
+    linear-gradient(155deg, #ff4058 0 18%, var(--red) 18% 72%, #a91529 72%);
+  box-shadow: inset 0 -14px 24px rgba(80,0,12,.32), 0 12px 35px rgba(239,35,60,.2);
 }
 .car-body::after {
   content: "GY / 34"; position: absolute; left: 44%; top: 32px;
@@ -346,12 +357,89 @@ h1 {
 .halo { position: absolute; width: 92px; height: 8px; left: calc(38% + 10px); top: 65px; background: #1a1a1a; border-radius: 50%; }
 .airbox { position: absolute; width: 42px; height: 58px; left: 59%; top: 62px; background: #111; clip-path: polygon(18% 0,82% 0,100% 100%,0 100%); }
 .front-wing, .rear-wing { position: absolute; height: 18px; background: #161616; }
+.rear-wing {
+  height: 26px;
+  box-shadow: 0 10px 0 -4px #2a2a2a, 0 18px 0 -8px #111;
+}
+.rear-wing::after {
+  content: "";
+  position: absolute;
+  right: -4px;
+  bottom: -14px;
+  width: 8px;
+  height: 34px;
+  background: var(--red);
+}
 .front-wing { right: 0; top: 180px; width: 120px; clip-path: polygon(15% 0,100% 10%,100% 100%,0 75%); }
 .rear-wing { left: 0; top: 92px; width: 130px; clip-path: polygon(0 20%,85% 0,100% 55%,0 100%); }
-.tire { position: absolute; width: 92px; height: 92px; border-radius: 50%; background: #050505; box-shadow: inset 0 0 0 13px #252525, inset 0 0 0 20px #090909; }
-.tire::after { content: ""; position: absolute; inset: 34px; border-radius: 50%; background: #c8c8c2; }
+.tire {
+  position: absolute; width: 92px; height: 92px; border-radius: 50%;
+  background:
+    radial-gradient(circle, transparent 0 22%, #111 23% 35%, transparent 36%),
+    repeating-conic-gradient(#151515 0 7deg, #090909 7deg 14deg);
+  box-shadow: inset 0 0 0 13px #292929, inset 0 0 0 18px #090909, 0 10px 20px rgba(0,0,0,.5);
+  animation: tire-pulse 1.7s ease-in-out infinite;
+}
+.tire::before {
+  content: "";
+  position: absolute; inset: 32px; border-radius: 50%;
+  border: 3px solid #777; background: repeating-conic-gradient(#d4d4d1 0 8deg, #333 8deg 18deg);
+}
+.tire::after { content: "PZERO"; position: absolute; left: 25px; top: 7px; color: #df1f32; font: 600 7px var(--mono); }
+.tire i { position: absolute; left: 8px; right: 8px; bottom: -8px; height: 5px; background: var(--red); }
 .tire-front-left { left: 13%; top: 160px; }
 .tire-front-right { right: 3%; top: 150px; }
+.tire-rear-left { left: 3%; top: 105px; width: 106px; height: 106px; }
+.tire-rear-right { right: 18%; top: 105px; width: 106px; height: 106px; }
+@keyframes tire-pulse { 50% { filter: brightness(1.12); } }
+
+.sidepod {
+  position: absolute;
+  width: 112px;
+  height: 34px;
+  top: 136px;
+  display: grid;
+  place-items: center;
+  border-top: 1px solid rgba(255,255,255,.45);
+  border-bottom: 1px solid rgba(0,0,0,.5);
+  background: rgba(16,16,16,.92);
+  color: #ddd;
+  font: 600 8px var(--mono);
+  letter-spacing: .05em;
+  box-shadow: inset 0 0 15px rgba(239,35,60,.18);
+}
+.sidepod-left { left: 22%; transform: skewX(12deg); }
+.sidepod-right { right: 18%; transform: skewX(-12deg); }
+.floor-floor {
+  position: absolute; left: 18%; right: 10%; top: 196px; height: 9px;
+  background: #151515;
+  clip-path: polygon(0 30%, 100% 0, 96% 100%, 8% 80%);
+  box-shadow: 0 4px 0 var(--red);
+}
+.diffuser {
+  position: absolute; left: 7%; top: 184px; width: 80px; height: 38px;
+  display: flex; gap: 3px; transform: skewX(-18deg);
+}
+.diffuser i { flex: 1; border-top: 7px solid #222; border-left: 2px solid var(--red); }
+.wing-endplate {
+  position: absolute; z-index: 4; top: 163px; width: 28px; height: 36px;
+  display: grid; place-items: center; background: #111; color: white;
+  font: 600 6px var(--mono);
+}
+.endplate-left { left: -1px; }
+.endplate-right { right: -2px; }
+.car-sponsor { position: absolute; z-index: 5; font: 600 7px var(--mono); letter-spacing: .08em; color: rgba(255,255,255,.82); }
+.sponsor-01 { left: 35%; top: 151px; transform: rotate(-5deg); }
+.sponsor-02 { left: 49%; top: 128px; color: white; }
+.car-system-hud {
+  position: absolute; right: 0; bottom: 48px; width: 188px; padding: 12px;
+  border-left: 2px solid var(--red); background: rgba(8,8,8,.88); backdrop-filter: blur(8px);
+  font: 500 8px var(--mono); color: #aaa;
+}
+.car-system-hud strong { float: right; color: #5cdb72; }
+.car-system-hud div { height: 2px; margin: 12px 0 8px; background: #333; }
+.car-system-hud div i { display: block; width: var(--level); height: 100%; background: var(--red); animation: hud-load 2s ease-in-out infinite alternate; }
+@keyframes hud-load { from { width: 68%; } to { width: 96%; } }
 .speed-streak { position: absolute; left: -15%; top: 132px; width: 130px; height: 3px; background: white; box-shadow: -40px 25px 0 rgba(255,255,255,.35), -10px 54px 0 rgba(239,35,60,.8); }
 .timing-deck {
   position: absolute; bottom: 0; left: 4vw; right: 4vw; height: 58px;
@@ -555,4 +643,11 @@ footer > :last-child { justify-self: end; }
   footer { grid-template-columns: 1fr auto; padding: 0 18px; }
   footer p { display: none; }
   .race-rail { display: none; }
+  .car-system-hud { right: 6px; bottom: 12px; width: 160px; }
+  .race-car { transform: scale(.82) rotate(-4deg); transform-origin: center; }
+  .race-car { animation: mobile-car-idle 3.6s ease-in-out infinite; }
+  @keyframes mobile-car-idle {
+    0%, 100% { transform: scale(.82) rotate(-4deg) translateY(0); }
+    50% { transform: scale(.82) rotate(-3.6deg) translateY(-5px); }
+  }
 }
