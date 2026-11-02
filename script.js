@@ -65,14 +65,14 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 applyLanguage(language);
 
-const cursorGlow = document.querySelector(".cursor-glow");
 const stage = document.querySelector(".hero-machine");
+const progress = document.getElementById("pageProgress");
+const scrollCar = document.getElementById("scrollCar");
 
 if (window.matchMedia("(pointer: fine)").matches) {
   window.addEventListener("pointermove", (event) => {
-    cursorGlow.style.opacity = "1";
-    cursorGlow.style.left = `${event.clientX}px`;
-    cursorGlow.style.top = `${event.clientY}px`;
+    document.documentElement.style.setProperty("--pointer-x", `${event.clientX}px`);
+    document.documentElement.style.setProperty("--pointer-y", `${event.clientY}px`);
   });
 
   stage?.addEventListener("pointermove", (event) => {
@@ -86,3 +86,14 @@ if (window.matchMedia("(pointer: fine)").matches) {
     stage.style.transform = "";
   });
 }
+
+function updateRaceProgress() {
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const ratio = scrollable > 0 ? window.scrollY / scrollable : 0;
+  progress?.style.setProperty("transform", `scaleX(${ratio})`);
+  scrollCar?.style.setProperty("--race-position", `${Math.min(84, ratio * 84)}vh`);
+}
+
+window.addEventListener("scroll", updateRaceProgress, { passive: true });
+window.addEventListener("resize", updateRaceProgress);
+updateRaceProgress();
