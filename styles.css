@@ -1,6 +1,6 @@
 :root {
-  --red: #ef233c;
-  --red-dark: #a91529;
+  --red: #ff7a00;
+  --red-dark: #d95300;
   --black: #090909;
   --panel: #121212;
   --cream: #f2f0e8;
@@ -19,7 +19,7 @@ body {
   overflow-x: hidden;
   background-color: var(--cream);
   background-image:
-    linear-gradient(115deg, transparent 0 66%, rgba(239,35,60,.045) 66% 66.2%, transparent 66.2%),
+    linear-gradient(115deg, transparent 0 66%, rgba(255,122,0,.045) 66% 66.2%, transparent 66.2%),
     linear-gradient(rgba(9,9,9,.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(9,9,9,.025) 1px, transparent 1px);
   background-size: 100% 100%, 32px 32px, 32px 32px;
@@ -42,7 +42,7 @@ body::after {
   z-index: 98;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(420px circle at var(--pointer-x, 50%) var(--pointer-y, 50%), rgba(239,35,60,.055), transparent 70%);
+  background: radial-gradient(420px circle at var(--pointer-x, 50%) var(--pointer-y, 50%), rgba(255,122,0,.055), transparent 70%);
 }
 
 .page-progress {
@@ -65,8 +65,8 @@ body::after {
   z-index: -1;
   inset: 60px calc(50% - 50vw);
   background:
-    radial-gradient(circle at 78% 28%, rgba(239,35,60,.12) 0 3px, transparent 4px),
-    radial-gradient(circle at 78% 28%, rgba(239,35,60,.07) 0 86px, transparent 87px),
+    radial-gradient(circle at 78% 28%, rgba(255,122,0,.12) 0 3px, transparent 4px),
+    radial-gradient(circle at 78% 28%, rgba(255,122,0,.07) 0 86px, transparent 87px),
     linear-gradient(130deg, transparent 0 76%, rgba(9,9,9,.035) 76% 76.3%, transparent 76.3%);
   background-size: 100% 100%, 100% 100%, 100% 100%;
   opacity: .9;
@@ -91,7 +91,7 @@ body::after {
   transform-origin: left;
   transform: scaleX(0);
   background: var(--red);
-  box-shadow: 0 0 18px rgba(239,35,60,.8);
+  box-shadow: 0 0 18px rgba(255,122,0,.8);
 }
 
 .race-rail {
@@ -235,7 +235,7 @@ h1 {
   padding: 116px 4vw 70px;
   color: white;
   background:
-    radial-gradient(ellipse at 72% 42%, rgba(239,35,60,.32), transparent 21%),
+    radial-gradient(ellipse at 72% 42%, rgba(255,122,0,.32), transparent 21%),
     linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px),
     linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px),
     linear-gradient(122deg, transparent 0 58%, rgba(255,255,255,.025) 58% 59%, transparent 59%),
@@ -337,7 +337,7 @@ h1 {
   transition: transform .8s cubic-bezier(.2,.8,.2,1), filter .5s ease;
 }
 .hero-machine:hover .formula-render {
-  filter: saturate(1.15) drop-shadow(0 18px 18px rgba(239,35,60,.18));
+  filter: saturate(1.15) drop-shadow(0 18px 18px rgba(255,122,0,.18));
   transform: translateX(0) scale(.99);
 }
 .race-car .wheel { transform-box: fill-box; transform-origin: center; animation: svg-wheel-roll 2.8s linear infinite; }
@@ -350,7 +350,7 @@ h1 {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(115deg, rgba(239,35,60,.82) 0 8px, transparent 9px 72%, rgba(239,35,60,.42) 72% 73%, transparent 74%);
+    linear-gradient(115deg, rgba(255,122,0,.82) 0 8px, transparent 9px 72%, rgba(255,122,0,.42) 72% 73%, transparent 74%);
   mix-blend-mode: screen;
 }
 .real-car-overlay {
@@ -405,12 +405,12 @@ h1 {
 @keyframes asphalt { to { transform: translateX(55px); } }
 .car-body {
   position: absolute; width: 88%; height: 92px; left: 4%; top: 112px;
-  background: linear-gradient(155deg, #ff4058 0 18%, var(--red) 18% 72%, #a91529 72%);
+  background: linear-gradient(155deg, #ffad33 0 18%, var(--red) 18% 72%, #d95300 72%);
   clip-path: polygon(0 60%, 9% 45%, 28% 32%, 45% 20%, 72% 14%, 91% 32%, 100% 55%, 91% 75%, 67% 83%, 9% 76%);
   background-image:
     repeating-linear-gradient(135deg, transparent 0 5px, rgba(255,255,255,.025) 5px 6px),
-    linear-gradient(155deg, #ff4058 0 18%, var(--red) 18% 72%, #a91529 72%);
-  box-shadow: inset 0 -14px 24px rgba(80,0,12,.32), 0 12px 35px rgba(239,35,60,.2);
+    linear-gradient(155deg, #ffad33 0 18%, var(--red) 18% 72%, #d95300 72%);
+  box-shadow: inset 0 -14px 24px rgba(83,35,0,.32), 0 12px 35px rgba(255,122,0,.2);
 }
 .car-body::after {
   content: "GY / 34"; position: absolute; left: 44%; top: 32px;
@@ -452,7 +452,7 @@ h1 {
   position: absolute; inset: 32px; border-radius: 50%;
   border: 3px solid #777; background: repeating-conic-gradient(#d4d4d1 0 8deg, #333 8deg 18deg);
 }
-.tire::after { content: "PZERO"; position: absolute; left: 25px; top: 7px; color: #df1f32; font: 600 7px var(--mono); }
+.tire::after { content: "PZERO"; position: absolute; left: 25px; top: 7px; color: #ff7a00; font: 600 7px var(--mono); }
 .tire i { position: absolute; left: 8px; right: 8px; bottom: -8px; height: 5px; background: var(--red); }
 .tire-front-left { left: 13%; top: 160px; }
 .tire-front-right { right: 3%; top: 150px; }
@@ -473,7 +473,7 @@ h1 {
   color: #ddd;
   font: 600 8px var(--mono);
   letter-spacing: .05em;
-  box-shadow: inset 0 0 15px rgba(239,35,60,.18);
+  box-shadow: inset 0 0 15px rgba(255,122,0,.18);
 }
 .sidepod-left { left: 22%; transform: skewX(12deg); }
 .sidepod-right { right: 18%; transform: skewX(-12deg); }
@@ -558,7 +558,7 @@ h1 {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: radial-gradient(circle at 48% 35%, #111 0 30%, #303030 31% 48%, #ef233c 49% 58%, #111 59%);
+  background: radial-gradient(circle at 48% 35%, #111 0 30%, #303030 31% 48%, #ff7a00 49% 58%, #111 59%);
 }
 .crew-02 { animation-delay: -.6s; }
 .crew-03 { animation-delay: -1.2s; }
@@ -578,7 +578,7 @@ h1 {
 }
 .pit-tire span { font: 700 28px var(--mono); color: var(--red); transform: rotate(-8deg); }
 @keyframes tire-roll { to { transform: rotate(12deg) translateX(-8px); } }
-.speed-streak { position: absolute; left: -15%; top: 132px; width: 130px; height: 3px; background: white; box-shadow: -40px 25px 0 rgba(255,255,255,.35), -10px 54px 0 rgba(239,35,60,.8); }
+.speed-streak { position: absolute; left: -15%; top: 132px; width: 130px; height: 3px; background: white; box-shadow: -40px 25px 0 rgba(255,255,255,.35), -10px 54px 0 rgba(255,122,0,.8); }
 .timing-deck {
   position: absolute; bottom: 0; left: 4vw; right: 4vw; height: 58px;
   z-index: 5; display: grid; grid-template-columns: repeat(4, 1fr);
@@ -619,7 +619,7 @@ h1 {
   position: relative;
   isolation: isolate;
   background-image:
-    radial-gradient(circle at 86% 12%, rgba(239,35,60,.16), transparent 18%),
+    radial-gradient(circle at 86% 12%, rgba(255,122,0,.16), transparent 18%),
     linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px),
     linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px);
   background-size: 100% 100%, 42px 42px, 42px 42px;
@@ -676,7 +676,7 @@ h1 {
 .project-visual.grid { background-image: linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px); background-size: 30px 30px; }
 .monitor-screen {
   position: absolute; width: 55%; height: 48%; left: 22%; top: 25%;
-  background: #080808; border: 1px solid #3b3b3b; box-shadow: 22px 22px 0 rgba(239,35,60,.55);
+  background: #080808; border: 1px solid #3b3b3b; box-shadow: 22px 22px 0 rgba(255,122,0,.55);
 }
 .monitor-screen::before { content: "SYSTEMS  24 / 24"; position: absolute; left: 18px; top: 24px; font: 600 12px var(--mono); }
 .monitor-screen::after { content: ""; position: absolute; left: 18px; right: 18px; bottom: 40px; height: 70px; background: repeating-linear-gradient(90deg,var(--red) 0 9px,transparent 9px 16px); clip-path: polygon(0 100%,0 70%,12% 70%,12% 30%,25% 30%,25% 75%,38% 75%,38% 20%,51% 20%,51% 55%,64% 55%,64% 10%,76% 10%,76% 65%,90% 65%,90% 35%,100% 35%,100% 100%); }
@@ -792,8 +792,8 @@ footer > :last-child { justify-self: end; }
 
 /* Final race-control visual system */
 :root {
-  --race-red: #ff1f3d;
-  --race-red-soft: rgba(255, 31, 61, .18);
+  --race-red: #ff7a00;
+  --race-red-soft: rgba(255, 122, 0, .18);
   --ink: #090909;
   --paper: #f3f1e8;
   --cool-white: #fbfaf6;
@@ -801,7 +801,7 @@ footer > :last-child { justify-self: end; }
 
 ::selection {
   color: var(--ink);
-  background: #ffb3bf;
+  background: #ffc266;
 }
 
 .race-header {
@@ -819,7 +819,7 @@ footer > :last-child { justify-self: end; }
 }
 .race-header .driver-number {
   border-color: var(--race-red);
-  box-shadow: 0 0 24px rgba(255,31,61,.16);
+  box-shadow: 0 0 24px rgba(255,122,0,.16);
 }
 .race-nav a {
   position: relative;
@@ -835,6 +835,7 @@ footer > :last-child { justify-self: end; }
   transform: scaleX(0);
   transform-origin: right;
   background: var(--race-red);
+  color: var(--ink);
   transition: transform .2s ease;
 }
 .race-nav a:hover::after,
@@ -853,7 +854,7 @@ footer > :last-child { justify-self: end; }
 }
 .hero-name em {
   color: var(--race-red);
-  text-shadow: 0 0 42px rgba(255,31,61,.18);
+  text-shadow: 0 0 42px rgba(255,122,0,.18);
 }
 .hero-role {
   border-left-width: 3px;
@@ -865,7 +866,7 @@ footer > :last-child { justify-self: end; }
   background: var(--race-red);
   font-weight: 700;
   letter-spacing: .11em;
-  box-shadow: 0 14px 44px rgba(255,31,61,.16);
+  box-shadow: 0 14px 44px rgba(255,122,0,.16);
 }
 .race-button:focus-visible,
 .language-switch:focus-visible,
@@ -899,7 +900,7 @@ button:focus-visible {
 
 .garage {
   background:
-    radial-gradient(circle at 82% 8%, rgba(255,31,61,.18), transparent 20%),
+    radial-gradient(circle at 82% 8%, rgba(255,122,0,.18), transparent 20%),
     radial-gradient(circle at 18% 78%, rgba(255,255,255,.035), transparent 22%),
     linear-gradient(135deg, #080808 0, #101010 52%, #080808 100%);
 }
@@ -909,7 +910,7 @@ button:focus-visible {
 }
 .project-card:hover {
   border-color: var(--race-red);
-  box-shadow: 0 28px 80px rgba(0,0,0,.34), 0 0 0 1px rgba(255,31,61,.12);
+  box-shadow: 0 28px 80px rgba(0,0,0,.34), 0 0 0 1px rgba(255,122,0,.12);
 }
 .project-info h3 {
   font-family: var(--display-condensed);
@@ -929,7 +930,7 @@ button:focus-visible {
 }
 .tool-box:hover {
   background:
-    linear-gradient(135deg, transparent 0 72%, rgba(255,31,61,.16) 72%),
+    linear-gradient(135deg, transparent 0 72%, rgba(255,122,0,.16) 72%),
     var(--ink);
   transform: translateY(-7px);
 }
@@ -945,7 +946,7 @@ button:focus-visible {
 .contact-race {
   background:
     radial-gradient(circle at 82% 18%, rgba(255,255,255,.16), transparent 18%),
-    linear-gradient(120deg, #d51631 0, var(--race-red) 68%, #cf102d 100%);
+    linear-gradient(120deg, #b94600 0, var(--race-red) 68%, #d95300 100%);
 }
 .contact-panel p {
   font-size: 15px;
