@@ -3,221 +3,183 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Gökhan Yıldırım - cloud, automation ve middleware çözümleri.">
-  <title>Gökhan Yıldırım — Cloud & Middleware Engineer</title>
+  <meta name="description" content="Gökhan Yıldırım — Middleware, cloud ve infrastructure automation mühendisi.">
+  <title>Gökhan Yıldırım — Systems Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="noise"></div>
-  <nav class="nav">
-    <a class="brand" href="#top" aria-label="Ana sayfa">
-      <span>GY</span>
-      <span class="status-dot"></span>
+  <div class="track-lines" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="wordmark" href="#top" aria-label="Gökhan Yıldırım home">
+      <span class="pixel-mark">GY</span>
+      <span>GÖKHAN YILDIRIM</span>
     </a>
-    <div class="nav-links">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#stack">Stack</a>
-      <a href="#contact">Contact</a>
+    <nav aria-label="Main navigation">
+      <a href="#experience" data-i18n="navExperience">Deneyim</a>
+      <a href="#projects" data-i18n="navProjects">Projeler</a>
+      <a href="#toolkit" data-i18n="navToolkit">Araçlar</a>
+      <a href="#contact" data-i18n="navContact">İletişim</a>
+    </nav>
+    <div class="top-actions">
+      <button class="language-switch" id="languageSwitch" type="button" aria-label="Change language">EN</button>
+      <a class="github-link" href="https://github.com/thundergokhan" target="_blank" rel="noreferrer">GH ↗</a>
     </div>
-    <a class="nav-cta" href="https://github.com/thundergokhan" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
-  </nav>
+  </header>
 
   <main id="top">
-    <section class="hero section-shell">
+    <section class="hero">
       <div class="hero-copy">
-        <div class="eyebrow reveal"><span class="pulse"></span> İstanbul, TR · Remote</div>
-        <h1 class="reveal">Systems don't<br>have to be <em>magic.</em></h1>
-        <p class="hero-lead reveal">Middleware platform operations, secure file transfer ve infrastructure automation alanlarında çalışan; kritik altyapıları anlaşılır, güvenilir ve sürdürülebilir sistemlere dönüştüren mühendis.</p>
+        <div class="race-label reveal">
+          <span class="status-light"></span>
+          <span data-i18n="available">İstanbul · Aktif</span>
+          <span class="race-number">NO. 34</span>
+        </div>
+        <h1 class="reveal"><span data-i18n="heroLine1">Sistemleri</span><br><i data-i18n="heroLine2">hızlı</i> <span data-i18n="heroLine3">ve</span><br><span data-i18n="heroLine4">güvenilir</span> <span data-i18n="heroLine5">çalıştırırım.</span></h1>
+        <p class="hero-intro reveal" data-i18n="heroIntro">Middleware platform operations, secure file transfer ve infrastructure automation alanlarında çalışan bir systems engineer.</p>
         <div class="hero-actions reveal">
-          <a class="primary-btn" href="#work">Projelerimi gör <span>↓</span></a>
-          <a class="text-btn" href="#contact">Bir şey konuşalım <span>↗</span></a>
+          <a class="race-button" href="#experience"><span data-i18n="viewCareer">Kariyeri incele</span><b>→</b></a>
+          <a class="plain-link" href="#projects"><span data-i18n="viewProjects">Projeler ↓</span></a>
         </div>
       </div>
 
-      <div class="hero-console reveal" aria-label="Örnek sistem durumu terminali">
-        <div class="console-head">
-          <div class="console-dots"><i></i><i></i><i></i></div>
-          <span>system-status</span>
-          <span class="live-label">LIVE</span>
+      <div class="car-stage reveal" aria-label="Pixel art system race car">
+        <div class="telemetry">
+          <div><span data-i18n="mode">MOD</span><strong>RACE</strong></div>
+          <div><span data-i18n="status">DURUM</span><strong class="green">SYSTEMS GO</strong></div>
         </div>
-        <div class="console-body">
-          <div class="terminal-line"><span class="cyan">gokhan@cloud</span>:<span class="violet">~</span>$ systemctl status</div>
-          <div class="status-row"><span class="status-light"></span><b>all systems operational</b></div>
-          <div class="metric-grid">
-            <div><span>Uptime</span><strong>99.99%</strong></div>
-            <div><span>Latency</span><strong>12ms</strong></div>
-            <div><span>Events</span><strong>1.2M</strong></div>
+        <div class="pixel-car">
+          <div class="car-shadow"></div>
+          <div class="wing rear"></div>
+          <div class="body">
+            <div class="cockpit"></div>
+            <div class="halo"></div>
+            <div class="airbox">GY</div>
           </div>
-          <div class="chart-title"><span>REQUESTS / SEC</span><span>last 24h</span></div>
-          <div class="chart" aria-hidden="true">
-            <svg viewBox="0 0 500 150" preserveAspectRatio="none">
-              <defs>
-                <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#b9ff66" stop-opacity=".28"/>
-                  <stop offset="1" stop-color="#b9ff66" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
-              <path class="area" d="M0 118 C35 114 45 90 76 96 S120 124 154 96 S203 79 230 91 S278 112 309 78 S350 35 384 62 S428 98 500 32 L500 150 L0 150 Z"/>
-              <path class="line" d="M0 118 C35 114 45 90 76 96 S120 124 154 96 S203 79 230 91 S278 112 309 78 S350 35 384 62 S428 98 500 32"/>
-            </svg>
-          </div>
-          <div class="terminal-line bottom"><span class="cyan">gokhan@cloud</span>:<span class="violet">~</span>$ <span class="cursor"></span></div>
+          <div class="wheel wheel-left"><i></i></div>
+          <div class="wheel wheel-right"><i></i></div>
+          <div class="wing front"></div>
+          <div class="speed-lines"><i></i><i></i><i></i></div>
+        </div>
+        <div class="telemetry bottom">
+          <div><span data-i18n="uptime">UPTİME</span><strong>99.99%</strong></div>
+          <div><span>ENV</span><strong>PROD</strong></div>
+          <div><span data-i18n="focus">ODAK</span><strong>0 OPS</strong></div>
         </div>
       </div>
     </section>
 
-    <section class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>CLOUD</span><b>✦</b><span>AUTOMATION</span><b>✦</b><span>MIDDLEWARE</span><b>✦</b><span>OBSERVABILITY</span><b>✦</b><span>DEVOPS</span><b>✦</b>
-        <span>CLOUD</span><b>✦</b><span>AUTOMATION</span><b>✦</b><span>MIDDLEWARE</span><b>✦</b><span>OBSERVABILITY</span><b>✦</b><span>DEVOPS</span><b>✦</b>
+    <div class="speed-ticker" aria-hidden="true">
+      <div><span>MIDDLEWARE</span><b>///</b><span>AUTOMATION</span><b>///</b><span>LINUX</span><b>///</b><span>OPENSHIFT</span><b>///</b><span>OBSERVABILITY</span><b>///</b><span>MIDDLEWARE</span><b>///</b><span>AUTOMATION</span><b>///</b><span>LINUX</span></div>
+    </div>
+
+    <section class="section experience" id="experience">
+      <div class="section-title reveal">
+        <span>01 / <span data-i18n="career">KARİYER</span></span>
+        <h2 data-i18n="experienceTitle">Operasyon pitinden üretime.</h2>
+        <p data-i18n="experienceNote">Kritik altyapı, günlük operasyonlar ve kalıcı çözümler.</p>
+      </div>
+      <div class="career-grid">
+        <article class="career-card featured-card reveal">
+          <div class="lap-number">01</div>
+          <div class="career-meta">
+            <span>2025 — NOW</span>
+            <span>GARANTİ BBVA TECHNOLOGY</span>
+          </div>
+          <h3 data-i18n="roleCurrent">Integration Middleware Technologies</h3>
+          <p data-i18n="currentRole">Garanti BBVA Technology bünyesinde BilgeAdam Technologies üzerinden middleware platform operations, automation ve secure file transfer operasyonları.</p>
+          <div class="tags"><span>WebLogic</span><span>WebSphere</span><span>IBM MQ</span><span>Linux</span><span>OpenShift</span></div>
+        </article>
+        <article class="career-card reveal">
+          <div class="lap-number">02</div>
+          <div class="career-meta">
+            <span>APR 2025 — OCT 2025</span>
+            <span>BİLGEADAM TECHNOLOGIES</span>
+          </div>
+          <h3 data-i18n="roleCloud">Cloud Services Automation</h3>
+          <p data-i18n="cloudRole">GT-ORBIT üzerinde Windows ve Linux sunucu provisioning; SCOM, Dynatrace, Instana ve TrueSight operasyonları; Python otomasyonları ve Power BI raporları.</p>
+          <div class="tags"><span>GT-ORBIT</span><span>Dynatrace</span><span>SCOM</span><span>Python</span><span>Power BI</span></div>
+        </article>
+        <article class="career-card reveal">
+          <div class="lap-number">03</div>
+          <div class="career-meta">
+            <span>2023 — 2025</span>
+            <span>TURKCELL GLOBAL BİLGİ</span>
+          </div>
+          <h3 data-i18n="roleSpecialist">Enterprise Solution Specialist</h3>
+          <p data-i18n="specialistRole">ITSM süreçleri, L1/L2 destek, RPA otomasyonları ve ETİ, DeFacto, Digiturk ile KOÇ projelerinde operasyon ve SLA yönetimi.</p>
+          <div class="tags"><span>ITSM</span><span>Active Directory</span><span>Azure</span><span>RPA</span><span>Power BI</span></div>
+        </article>
       </div>
     </section>
 
-    <section class="work section-shell" id="work">
-      <div class="section-heading reveal">
-        <div>
-          <span class="kicker">01 / SELECTED WORK</span>
-          <h2>Production'a çıkmış şeyler.</h2>
-        </div>
-        <p>Geliştirdim, kullandım ve açığa bıraktım.</p>
+    <section class="section projects" id="projects">
+      <div class="section-title reveal">
+        <span>02 / <span data-i18n="projectsLabel">PROJELER</span></span>
+        <h2 data-i18n="projectsTitle">Garage'da geliştirilenler.</h2>
+        <p data-i18n="projectsNote">Kişisel repo sahipliği ve gerçek kullanım odaklı araçlar.</p>
       </div>
-
       <div class="project-grid">
-        <article class="project-card featured reveal">
-          <div class="project-art art-one">
-            <div class="app-window">
-              <div class="app-bar"><i></i><i></i><i></i><span>middleware-monitor</span></div>
-              <div class="app-content">
-                <div class="mini-sidebar"></div>
-                <div class="mini-main">
-                  <div class="mini-stat"><span>ACTIVE</span><strong>24</strong></div>
-                  <div class="mini-stat alert"><span>ALERTS</span><strong>03</strong></div>
-                  <div class="mini-chart"></div>
-                </div>
-              </div>
-            </div>
+        <article class="project featured-project reveal">
+          <div class="project-screen screen-monitor">
+            <div class="screen-grid"></div>
+            <div class="dash-panel"><span>AGENT STATUS</span><strong>24 <small>/ 24</small></strong><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i></div></div>
           </div>
-          <div class="project-info">
-            <div class="project-meta"><span>Python</span><span>Monitoring</span><span>2025</span></div>
+          <div class="project-copy">
+            <div class="project-code">PIT 01</div>
             <h3>Middleware Monitor</h3>
-            <p>Middleware servislerini, agent durumlarını ve altyapı sinyallerini tek ekrandan izlemek için geliştirdiğim operasyon odaklı Python projesi.</p>
-            <a href="https://github.com/thundergokhan/middleware-monitor" target="_blank" rel="noreferrer">Kaynağı incele <span>↗</span></a>
+            <p data-i18n="middlewareMonitor">Middleware servisleri ve altyapı sinyallerini tek panelde izleyen Python projesi.</p>
+            <a href="https://github.com/thundergokhan/middleware-monitor" target="_blank" rel="noreferrer" data-i18n="viewSource">Kaynağı incele ↗</a>
           </div>
         </article>
-
-        <article class="project-card reveal">
-          <div class="project-art art-two">
-            <div class="orbit">
-              <div class="core">GY</div>
-              <i class="node n1"></i><i class="node n2"></i><i class="node n3"></i><i class="node n4"></i>
-              <div class="ring r1"></div><div class="ring r2"></div>
-            </div>
+        <article class="project reveal">
+          <div class="project-screen screen-bsa">
+            <div class="terminal-art">$ bsa-check --all<br><span>PASS  /  18</span><br>WARN  /  02<br>FAIL  /  00</div>
           </div>
-          <div class="project-info">
-            <div class="project-meta"><span>Python</span><span>BMC BSA</span><span>2025</span></div>
-            <h3>BSA Agent Checker</h3>
-            <p>BMC BladeLogic Server Automation agent durumlarını izlemek, sorgulamak ve kontrol etmek için geliştirdiğim Python aracı.</p>
-            <a href="https://github.com/thundergokhan/bsa-agent-checker" target="_blank" rel="noreferrer">Kaynağı incele <span>↗</span></a>
-          </div>
+          <div class="project-copy"><div class="project-code">PIT 02</div><h3>BSA Agent Checker</h3><p data-i18n="bsaChecker">BladeLogic Server Automation agent durumlarını kontrol eden Python aracı.</p><a href="https://github.com/thundergokhan/bsa-agent-checker" target="_blank" rel="noreferrer" data-i18n="viewSource">Kaynağı incele ↗</a></div>
         </article>
-
-        <article class="project-card reveal">
-          <div class="project-art art-three">
-            <div class="clip-grid">
-              <div></div><div></div><div></div><div></div><div></div><div></div>
-            </div>
-            <div class="clip-cursor">⌘</div>
+        <article class="project reveal">
+          <div class="project-screen screen-yaml">
+            <div class="yaml-art"><b>YAML</b><span></span><span></span><span></span><i>SCAN</i></div>
           </div>
-          <div class="project-info">
-            <div class="project-meta"><span>Python</span><span>YAML</span><span>2025</span></div>
-            <h3>YAML In-use Scanner</h3>
-            <p>Kullanımdaki YAML değerlerini tarayan ve yanlış tanımlanan veya eksik kullanılmayan girdileri bulmaya yardımcı olan Python uygulaması.</p>
-            <a href="https://github.com/thundergokhan/YAML-Inuse-Scanner" target="_blank" rel="noreferrer">Kaynağı incele <span>↗</span></a>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-art art-four">
-            <div class="file-stack">
-              <div class="file f1">nashi<span>.app</span></div>
-              <div class="file f2">QR</div>
-              <div class="file f3">↓</div>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-meta"><span>Python</span><span>Monitoring</span><span>2025</span></div>
-            <h3>Uptime Monitor</h3>
-            <p>Sistem ve servislerin erişilebilirlik durumunu izleyen, kesintileri ve hizmet sürekliliğini takip etmeye yardımcı olan Python projesi.</p>
-            <a href="https://github.com/thundergokhan/Uptime-Monitor" target="_blank" rel="noreferrer">Kaynağı incele <span>↗</span></a>
-          </div>
+          <div class="project-copy"><div class="project-code">PIT 03</div><h3>YAML In-use Scanner</h3><p data-i18n="yamlScanner">Kullanımda olan YAML yapılarını tarayan ve tutarsızlıkları bulan scanner.</p><a href="https://github.com/thundergokhan/YAML-Inuse-Scanner" target="_blank" rel="noreferrer" data-i18n="viewSource">Kaynağı incele ↗</a></div>
         </article>
       </div>
     </section>
 
-    <section class="about section-shell" id="about">
-      <div class="portrait-wrap reveal">
-        <div class="portrait">
-          <img src="https://github.com/thundergokhan.png" alt="Gökhan Yıldırım">
-          <div class="portrait-grid"></div>
-        </div>
-        <div class="location-card"><span>BASED IN</span><strong>41.0082° N<br>28.9784° E</strong></div>
+    <section class="section toolkit" id="toolkit">
+      <div class="section-title reveal">
+        <span>03 / <span data-i18n="toolkitLabel">TECH STACK</span></span>
+        <h2 data-i18n="toolkitTitle">Takımın ekipman kutusu.</h2>
       </div>
-      <div class="about-copy reveal">
-        <span class="kicker">02 / ABOUT</span>
-        <h2>Altyapıyı sadece çalışır hâlinde bırakmayanlardan.</h2>
-        <p class="about-lead">Ben sistemleri uçtan uca görmeyi ve görünmez sorunları görünür hale getirmeyi seviyorum.</p>
-        <p>Middleware platform operations, secure file transfer ve infrastructure automation alanlarında çalışıyorum. UNIX/Linux, Windows ve OpenShift üzerinde WebLogic, WebSphere, IBM IHS, Apache, nginx, IBM MQ ve Couchbase sistemlerini otomasyon odaklı bir yaklaşımla işletiyorum.</p>
-        <div class="about-facts">
-          <div><span>Focus</span><strong>Middleware · Cloud<br>· Automation</strong></div>
-          <div><span>Location</span><strong>Istanbul<br>Türkiye</strong></div>
-          <div><span>Experience</span><strong>Operations &amp;<br>root-cause analysis</strong></div>
-        </div>
+      <div class="tool-grid reveal">
+        <div><span class="tool-index">01</span><h3>Middleware</h3><p>WebLogic · WebSphere<br>IBM MQ · IHS · Couchbase</p></div>
+        <div><span class="tool-index">02</span><h3>Automation</h3><p>Python · Bash · PowerShell<br>Ansible · RPA</p></div>
+        <div><span class="tool-index">03</span><h3>Platforms</h3><p>Linux · Windows<br>OpenShift · VMware</p></div>
+        <div><span class="tool-index">04</span><h3>Observability</h3><p>Dynatrace · SCOM · Instana<br>TrueSight · Power BI</p></div>
       </div>
     </section>
 
-    <section class="stack section-shell" id="stack">
-      <div class="section-heading reveal">
-        <div>
-          <span class="kicker">03 / TOOLBOX</span>
-          <h2>Bunlarla uğraşıyorum.</h2>
-        </div>
-        <p>Doğru araçla işi bitirip,<br>yanlış araçla güzel ders çıkarırım.</p>
+    <section class="contact" id="contact">
+      <div class="finish-line">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
       </div>
-      <div class="stack-grid reveal">
-        <div class="stack-card"><span>01</span><h3>Middleware</h3><p>WebLogic · WebSphere · IBM MQ</p></div>
-        <div class="stack-card"><span>02</span><h3>Automation</h3><p>Python · Bash · PowerShell · Ansible</p></div>
-        <div class="stack-card"><span>03</span><h3>Platforms</h3><p>Linux · Windows · OpenShift</p></div>
-        <div class="stack-card"><span>04</span><h3>Observability</h3><p>Dynatrace · SCOM · Instana · TrueSight</p></div>
-        <div class="stack-card"><span>05</span><h3>Infrastructure</h3><p>GT-ORBIT · VMware · BMC BSA</p></div>
-        <div class="stack-card"><span>06</span><h3>IT Operations</h3><p>ITSM · IAM · Documentation</p></div>
-      </div>
-    </section>
-
-    <section class="contact section-shell" id="contact">
       <div class="contact-copy reveal">
-        <span class="kicker">04 / CONTACT</span>
-        <h2>Bir sistem var mı<br>ve <em>çözülmeyi bekliyor?</em></h2>
+        <span>04 / <span data-i18n="contactLabel">CONTACT</span></span>
+        <h2><span data-i18n="contactTitle1">Sıradaki hedef</span><br><i data-i18n="contactTitle2">birlikte.</i></h2>
       </div>
       <div class="contact-panel reveal">
-        <p>Bir fikir, bir iş birliği ya da iyi bir sohbet için ulaşabilirsin.</p>
-        <a class="email-btn" href="mailto:hello@gokhanyildirim.dev">hello@gokhanyildirim.dev <span>↗</span></a>
-        <div class="socials">
-          <a href="https://github.com/thundergokhan" target="_blank" rel="noreferrer">GitHub ↗</a>
-          <a href="https://www.linkedin.com/in/g%C3%B6khan-y%C4%B1ld%C4%B1r%C4%B1m-19g3499/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-        </div>
+        <p data-i18n="contactText">Altyapı, otomasyon veya yeni bir iş birliği hakkında konuşmak için ulaşabilirsin.</p>
+        <a class="race-button light" href="mailto:hello@gokhanyildirim.dev"><span>HELLO@GOKHANYILDIRIM.DEV</span><b>↗</b></a>
+        <div class="contact-links"><a href="https://github.com/thundergokhan" target="_blank" rel="noreferrer">GitHub ↗</a></div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <a class="brand" href="#top"><span>GY</span><span class="status-dot"></span></a>
-    <p>© 2026 Gökhan Yıldırım</p>
-    <a href="#top">Yukarı çık ↑</a>
-  </footer>
+  <footer><a class="wordmark" href="#top"><span class="pixel-mark">GY</span><span>GÖKHAN YILDIRIM</span></a><p>© 2026 · ISTANBUL</p><a href="#top" data-i18n="backTop">Yukarı ↑</a></footer>
   <script src="script.js"></script>
 </body>
 </html>
